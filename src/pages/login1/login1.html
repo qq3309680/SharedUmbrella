@@ -1,0 +1,47 @@
+
+
+
+
+<ion-content class="login-page page-signup">
+  <!--灰色遮罩层 begin-->
+  <div class="loadingDiv " *ngIf="loading"></div>
+  <!--灰色遮罩层 end-->
+  <div class="signup-container" >
+    <!-- Header -->
+    <div class="signup-header">
+      <!--<img src="WFRes/_Content/Login/images/LOGO_W.png" style="width: 260px" />-->
+      <span>共享雨伞</span>
+
+    </div>
+    <div class="signup-form" >
+      <i class="fa-li fa fa-spinner fa-spin fa-4x loading-icon " *ngIf="loading"></i>
+      <div class="login-message" *ngIf="loginFail">
+        <!--<a href="#">立即注册</a>|-->
+        <span>{{returnMessage}}</span>
+      </div>
+      <form [formGroup]="form">
+        <div class="login-inp">
+          <div class="account-icon" >
+            <ion-icon class="account-icon-ion" name="ios-person-outline" ></ion-icon>
+          </div>
+
+          <input  formControlName="account"  type="text" placeholder="账    号">
+
+        </div>
+        <div class="login-inp">
+          <div class="account-icon" >
+            <ion-icon  class="account-icon-ion" name="ios-lock-outline"></ion-icon>
+          </div>
+          <input formControlName="password" type="password" placeholder="密    码">
+        </div>
+
+
+        <div class="login-btn"  (click)="submitForm()" ><a href="#" >立即登录</a></div>
+        <div class="login-txt" (click)="GotoRegist()">
+          <a  href="#"  >注册</a>
+          <!--<a href="#">忘记密码？</a>-->
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

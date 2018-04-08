@@ -1,0 +1,17 @@
+
+<ion-nav  hideBackButton="true" #mycontent [root]="rootPage"></ion-nav>
+<ion-header>
+  <ion-navbar style="text-align: center">
+    <button ion-button menuToggle icon-only><ion-icon name="menu"></ion-icon></button>
+    <ion-title >{{title}}</ion-title>
+    <!--<ion-buttons end>-->
+      <!--<button ion-button icon-only >-->
+        <!--<ion-icon name="ios-search"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+
+  </ion-navbar>
+</ion-header>
+<ion-tabs    #mainTabs (ionChange)="getTitle()" >
+  <ion-tab *ngFor="let tab of tabList"  [root]="tab.tabRoot" [tabTitle]="tab.tabTitle" [tabIcon]="tab.tabIcon" ></ion-tab>
+</ion-tabs>

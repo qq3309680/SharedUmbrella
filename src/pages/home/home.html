@@ -1,0 +1,30 @@
+
+
+<ion-content class="page-ion-content">
+  <div id="btn_location">
+    <button ion-button  class="btn_loaction" (click)="scannerBarCode()">扫码还伞</button>
+  </div>
+  <ion-list no-lines>
+    <ion-item *ngFor="let record of recordList" class="home-item" style="border-width:1px;">
+      <div>
+        <h2 class="home-item-title" title="{{record.brand}}--地点：{{record.address}}">{{record.brand}}--地点：{{record.address}}</h2>
+        <p>
+          <span class="home-item-info" >
+            时间:{{record.borrowDate}}  {{record.type}}
+          </span>
+        </p>
+        <ion-icon class="right-arrow" name="ios-arrow-forward"></ion-icon>
+      </div>
+    </ion-item>
+    <ion-item style="cursor:pointer">
+      <div class="item-icon-left" style="padding-left:10px;">
+
+        <h2><ion-icon name="md-happy"> </ion-icon>全部加载完成</h2>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <div style="width:100%;height: 40px;">
+
+  </div>
+</ion-content>

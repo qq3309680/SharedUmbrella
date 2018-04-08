@@ -1,0 +1,66 @@
+
+
+
+
+<ion-content class="login-page page-signup">
+  <!--灰色遮罩层 begin-->
+  <div class="loadingDiv " *ngIf="loading"></div>
+  <!--灰色遮罩层 end-->
+  <div class="signup-container" >
+    <!-- Header -->
+    <div class="signup-header">
+      <!--<img src="WFRes/_Content/Login/images/LOGO_W.png" style="width: 260px" />-->
+      <span>注册</span>
+
+    </div>
+    <div class="signup-form" >
+      <i class="fa-li fa fa-spinner fa-spin fa-4x loading-icon " *ngIf="loading"></i>
+      <div class="login-message" *ngIf="loginFail">
+        <!--<a href="#">立即注册</a>|-->
+        <span>{{returnMessage}}</span>
+      </div>
+      <form [formGroup]="registform">
+        <div class="login-inp">
+          <div class="account-icon" >
+            <ion-icon class="account-icon-ion" name="ios-call-outline" ></ion-icon>
+          </div>
+
+          <input  formControlName="account"  type="text" placeholder="手 机 号">
+
+        </div>
+        <div class="login-inp">
+          <div class="account-icon" >
+            <ion-icon  class="account-icon-ion" name="ios-person-outline"></ion-icon>
+          </div>
+          <input formControlName="username" type="text" placeholder="姓  名">
+        </div>
+        <div class="login-inp">
+          <div class="account-icon" >
+            <ion-icon  class="account-icon-ion" name="ios-lock-outline"></ion-icon>
+          </div>
+          <input formControlName="password" type="password" placeholder="密    码">
+        </div>
+
+        <div class="login-inp">
+          <div class="account-icon" >
+            <ion-icon  class="account-icon-ion" name="ios-lock-outline"></ion-icon>
+          </div>
+          <input formControlName="comfirmpassword" type="password" placeholder="密    码">
+        </div>
+
+        <div class="login-inp">
+          <div class="account-icon" >
+            <ion-icon  class="account-icon-ion" name="ios-at-outline"></ion-icon>
+          </div>
+          <input formControlName="station" type="text" placeholder="地 址">
+        </div>
+
+        <div class="login-btn"><a  (click)="submitForm()"  >立即注册</a></div>
+        <div class="login-txt">
+          <!--<a (click)="GotoRegist()" >立即注册</a>-->
+          <!--<a href="#">忘记密码？</a>-->
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

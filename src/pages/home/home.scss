@@ -1,0 +1,61 @@
+page-home {
+  //ion-item-sliding {
+  //  margin: 5px;
+  //}
+  #btn-location{
+    position: relative;
+    top: 10px;
+    left: 0;
+    z-index: 999;
+  }
+  .btn_loaction{
+    padding-right:10px;
+  }
+  .home-item {
+    font-size: 1em;
+    color: #282828;
+    padding-top: 5px;
+    padding-bottom: 0;
+    border-bottom: 1px solid #cecece;
+  }
+  .home-item-title{
+    cursor: pointer;
+    overflow: hidden;/*内容超出后隐藏*/
+    text-overflow: ellipsis;/* 超出内容显示为省略号*/
+    white-space: nowrap;/*文本不进行换行*/
+    font-size:1em;
+  }
+  //.home-item-title:after{
+  //  content:"...";
+  //  font-weight:bold;
+  //  position:absolute;
+  //  bottom:0;
+  //  right:0;
+  //  padding:0 20px 1px 45px;
+  //  background:url(../../assets/imgs/ellipsis_bg.png) repeat-y;
+  //}
+  .home-item-info{
+    padding-left:10px;
+    font-size:0.8rem;
+  }
+  .secondary-detail {
+    display: block;
+    color: #cecece;
+    font-weight: 400;
+    margin-top: 0;
+  }
+  .item-icon-right {
+    padding-right: 36px;
+  }
+  .right-arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    right: 12px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform:translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+  }
+}
+

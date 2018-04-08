@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="bar-stable">
+    <img src="../../assets/imgs/bannerlogo.png" class="bannerLogo" style=" height:30px;width:30px;float: left;margin-top: 13px;" />
+    <h1 class="bar-stable-title" style="text-align:left;left:40px;margin-top: 1rem;">移动办公</h1>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <a  ion-item  class="item" style="text-align:center;">
+      <img [src]="userPageInfo.Image" style="width: 60px;height: 60px;position: relative;padding-right:5px;border-radius:30px;" />
+      <div>
+        欢迎：{{userPageInfo.Name}}
+      </div>
+    </a>
+
+
+    <a class="item" ion-item  >
+      <ion-icon name="ios-call-outline"></ion-icon><span style="padding-left:5px;">电话：{{userPageInfo.Moblie}}</span>
+    </a>
+    <a class="item" ion-item >
+      <ion-icon name="ios-at-outline"></ion-icon><span style="padding-left:5px">地址：{{userPageInfo.Station}}</span>
+    </a>
+
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div style="padding-top:3px;text-align:center;width:100%;font-size:16px;cursor:pointer" >
+      <ion-icon name="power"></ion-icon><a  href="#" (click)="LogOut()"  style="padding-left:6px;">注销</a>
+    </div>
+  </ion-toolbar>
+</ion-footer>
